@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/89a96d86-a41d-95c1-6e7c-6b90539fd4b9>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 8c582f96-a028-49bd-aa31-134de90f12a2
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 8c582f96-a028-49bd-aa31-134de90f12a2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> f2b7a2b8-58d9-4b39-ae58-2adb13b0d0ae
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/f2b7a2b8-58d9-4b39-ae58-2adb13b0d0ae>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d43b2246-245a-4200-b7fd-adf05c41e79d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cropSegTexture: false
+    cropTexture: false
+    debugSourceCropImage: false
+    debugSourceDPImage: false
+    debugSourceImage: false
+    debugSourceSegCropImage: false
+    debugSourceSegImage: false
+    dpMLComp: false
+    genMLComp: false
+    segBoxMLComp: false
+    segMLComp: false
+    sourceSegTexture: false
+    warpMLComp: false
+    warpPostProcessMLComp: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - segMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      segBoxMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      dpMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      warpMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      warpPostProcessMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      genMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      cropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      cropSegTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      sourceSegTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      debugSourceImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugSourceSegImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugSourceCropImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugSourceSegCropImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugSourceDPImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/346f0225-62fd-4cc2-8d09-4705e3df6008>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9830e804-5f1f-4110-9e81-11dafe808907
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9830e804-5f1f-4110-9e81-11dafe808907
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 216c9cb9-14e7-4fb7-8f42-45072008a34d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/216c9cb9-14e7-4fb7-8f42-45072008a34d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 468d625b-99e5-4a6d-a36a-bb1ca14a08aa
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    carouselItems: false
+    defaultScale: false
+    garmentSwitcherObject: false
+    selectedScale: false
+    swipeThreshold: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - garmentSwitcherObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      carouselItems: !<reference.SceneObject[]>
+        []
+      swipeThreshold: !<float> 50.000000
+      selectedScale: 1.200000
+      defaultScale: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject garmentSwitcherObject
+    - "// @input SceneObject[] carouselItems = {}"
+    - // @input float swipeThreshold = 50
+    - // @input float selectedScale = 1.2
+    - // @input float defaultScale = 1

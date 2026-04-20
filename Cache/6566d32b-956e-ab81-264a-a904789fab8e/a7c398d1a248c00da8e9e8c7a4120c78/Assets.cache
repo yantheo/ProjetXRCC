@@ -1,0 +1,321 @@
+- !<AssetCache>
+  AssetFiles:
+    96663257-3185-4337-8b3f-cd2573654283: 6566d32b-956e-ab81-264a-a904789fab8e/a7c398d1a248c00da8e9e8c7a4120c78/Data/SwagML OutputMaterial fallback.ss_graph
+  Assets:
+    - !<ShaderGraphPass/96663257-3185-4337-8b3f-cd2573654283>
+      PackagePath: ""
+      DefaultDefines:
+        []
+      DefaultProperties:
+        Port_Depth_N004:
+          typeIdx: 1
+          value: 1.000000
+        Port_FinalColor1_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor2_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor3_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_GSplatPointSize_N004:
+          typeIdx: 1
+          value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_RayDirection_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_RayOrigin_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_WorldNormal_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_WorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_WorldTangent_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 1.000000}
+      PassUiData: !<PassUiData>
+        ExtraDefines:
+          []
+        PassBindings:
+          - mLabel: Graph Parameters
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: flowHalfPx
+            mType: Property
+            mName: flowHalfPx
+            mWidget: spinbox
+            mHint: "Property: flowHalfPx"
+            mMin: ~
+            mMax: ~
+            mStep: 0.000000
+            mDefaultVal: 0.000000
+            mValues:
+              []
+          - mLabel: flowRelative
+            mType: Property
+            mName: flowRelative
+            mWidget: texture_group
+            mHint: "Property: flowRelative"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: flowSelection
+            mType: Property
+            mName: flowSelection
+            mWidget: texture_group
+            mHint: "Property: flowSelection"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: sx
+            mType: Property
+            mName: sx
+            mWidget: spinbox
+            mHint: "Property: sx"
+            mMin: ~
+            mMax: ~
+            mStep: 1.000000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: sy
+            mType: Property
+            mName: sy
+            mWidget: spinbox
+            mHint: "Property: sy"
+            mMin: ~
+            mMax: ~
+            mStep: 1.000000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: dx
+            mType: Property
+            mName: dx
+            mWidget: spinbox
+            mHint: "Property: dx"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: dy
+            mType: Property
+            mName: dy
+            mWidget: spinbox
+            mHint: "Property: dy"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Source Texture
+            mType: Property
+            mName: sourceCropTex
+            mWidget: texture_group
+            mHint: "Property: sourceCropTex"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: segShiftX
+            mType: Property
+            mName: segShiftX
+            mWidget: spinbox
+            mHint: "Property: segShiftX"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: segRatioX
+            mType: Property
+            mName: segRatioX
+            mWidget: spinbox
+            mHint: "Property: segRatioX"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: segShiftY
+            mType: Property
+            mName: segShiftY
+            mWidget: spinbox
+            mHint: "Property: segShiftY"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: segRatioY
+            mType: Property
+            mName: segRatioY
+            mWidget: spinbox
+            mHint: "Property: segRatioY"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: source parts
+            mType: Property
+            mName: sourceParts
+            mWidget: texture_group
+            mHint: "Property: sourceParts"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: SetByScript
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Camera
+            mType: Property
+            mName: camTex
+            mWidget: texture_group
+            mHint: "Property: camTex"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Source Garment Mask
+            mType: Property
+            mName: sourceGarmentMask
+            mWidget: texture_group
+            mHint: "Property: sourceGarmentMask"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Driving Hair Mask
+            mType: Property
+            mName: drivingHairMask
+            mWidget: texture_group
+            mHint: "Property: drivingHairMask"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Crop Center
+            mType: Property
+            mName: cropCenter
+            mWidget: spinbox
+            mHint: "Property: cropCenter"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Crop Size
+            mType: Property
+            mName: cropSize
+            mWidget: spinbox
+            mHint: "Property: cropSize"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Alpha Test Threshold
+            mType: Property
+            mName: alphaTestThreshold
+            mWidget: slider
+            mHint: |-
+              Property: alphaTestThreshold
+              
+              When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear.
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+        ShaderType: PostProcessing
+      ShaderPath: 6566d32b-956e-ab81-264a-a904789fab8e/a7c398d1a248c00da8e9e8c7a4120c78/Data/6a992e8/SwagML OutputMaterial fallback.glsl
+      Defines:
+        []
+      Properties:
+        {}
+      ReferencedAssets:
+        []
+      GraphStatus: Evaluated
+  SourceHash: a7c398d1a248c00da8e9e8c7a4120c78
+  FileHash: 722048c17a1ad86d8164f68341b67305
+  NativePackageItems:
+    []

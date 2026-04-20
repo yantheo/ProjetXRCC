@@ -1,0 +1,262 @@
+SCC_BACKEND_SHADER_FLAGS_BEGIN__
+SCC_BACKEND_SHADER_FLAGS_END__
+//SG_REFLECTION_BEGIN(200)
+//attribute vec4 boneData 5
+//attribute vec3 blendShape0Pos 6
+//attribute vec3 blendShape0Normal 12
+//attribute vec3 blendShape1Pos 7
+//attribute vec3 blendShape1Normal 13
+//attribute vec3 blendShape2Pos 8
+//attribute vec3 blendShape2Normal 14
+//attribute vec3 blendShape3Pos 9
+//attribute vec3 blendShape4Pos 10
+//attribute vec3 blendShape5Pos 11
+//attribute vec4 position 0
+//attribute vec3 normal 1
+//attribute vec4 tangent 2
+//attribute vec2 texture0 3
+//attribute vec2 texture1 4
+//attribute vec4 color 18
+//attribute vec3 positionNext 15
+//attribute vec3 positionPrevious 16
+//attribute vec4 strandProperties 17
+//output vec4 sc_FragData0 0
+//sampler sampler camTexSmpSC 0:24
+//sampler sampler drivingHairMaskSmpSC 0:25
+//sampler sampler flowRelativeSmpSC 0:26
+//sampler sampler flowSelectionSmpSC 0:27
+//sampler sampler genTexSmpSC 0:28
+//sampler sampler intensityTextureSmpSC 0:29
+//sampler sampler sc_ScreenTextureSmpSC 0:34
+//sampler sampler shaderMasksTexSmpSC 0:37
+//sampler sampler sourceCropTexSmpSC 0:38
+//sampler sampler sourceGarmentMaskSmpSC 0:39
+//texture texture2D camTex 0:1:0:24
+//texture texture2D drivingHairMask 0:2:0:25
+//texture texture2D flowRelative 0:3:0:26
+//texture texture2D flowSelection 0:4:0:27
+//texture texture2D genTex 0:5:0:28
+//texture texture2D intensityTexture 0:6:0:29
+//texture texture2D sc_ScreenTexture 0:18:0:34
+//texture texture2D shaderMasksTex 0:21:0:37
+//texture texture2D sourceCropTex 0:22:0:38
+//texture texture2D sourceGarmentMask 0:23:0:39
+//ubo float sc_BonesUBO 0:0:96 {
+//sc_Bone_t sc_Bones 0:[1]:96
+//float4 sc_Bones.boneMatrix 0:[3]:16
+//float4 sc_Bones.normalMatrix 48:[3]:16
+//}
+//ubo int UserUniforms 0:40:5408 {
+//float4 sc_Time 1376
+//float4 sc_UniformConstants 1392
+//float4x4 sc_ViewProjectionMatrixArray 1680:[2]:64
+//float4x4 sc_ModelViewMatrixArray 1936:[2]:64
+//float4x4 sc_ProjectionMatrixArray 2384:[2]:64
+//float4x4 sc_ProjectionMatrixInverseArray 2512:[2]:64
+//float4x4 sc_ViewMatrixArray 2640:[2]:64
+//float4x4 sc_PrevFrameViewProjectionMatrixArray 2896:[2]:64
+//float4x4 sc_ModelMatrix 3024
+//float4x4 sc_ModelMatrixInverse 3088
+//float3x3 sc_NormalMatrix 3152
+//float4x4 sc_PrevFrameModelMatrix 3248
+//float4 sc_CurrentRenderTargetDims 3456
+//sc_Camera_t sc_Camera 3472
+//float3 sc_Camera.position 0
+//float sc_Camera.aspect 16
+//float2 sc_Camera.clipPlanes 24
+//float sc_ShadowDensity 3504
+//float4 sc_ShadowColor 3520
+//float4x4 sc_ProjectorMatrix 3536
+//float4 weights0 3616
+//float4 weights1 3632
+//float4 sc_StereoClipPlanes 3664:[2]:16
+//float2 sc_TAAJitterOffset 3704
+//float4 voxelization_params_0 3824
+//float4 voxelization_params_frustum_lrbt 3840
+//float4 voxelization_params_frustum_nf 3856
+//float3 voxelization_params_camera_pos 3872
+//float4x4 sc_ModelMatrixVoxelization 3888
+//float correctedIntensity 3952
+//float3x3 intensityTextureTransform 4016
+//float4 intensityTextureUvMinMax 4064
+//float4 intensityTextureBorderColor 4080
+//int PreviewEnabled 4244
+//float alphaTestThreshold 4252
+//float3x3 camTexTransform 4304
+//float4 camTexUvMinMax 4352
+//float4 camTexBorderColor 4368
+//float2 cropCenter 4384
+//float2 cropSize 4392
+//float flowHalfPx 4400
+//float4 flowRelativeSize 4416
+//float3x3 flowRelativeTransform 4464
+//float4 flowRelativeUvMinMax 4512
+//float4 flowRelativeBorderColor 4528
+//float4 flowSelectionSize 4544
+//float3x3 flowSelectionTransform 4592
+//float4 flowSelectionUvMinMax 4640
+//float4 flowSelectionBorderColor 4656
+//float sx 4672
+//float sy 4676
+//float dx 4680
+//float dy 4684
+//float3x3 sourceCropTexTransform 4736
+//float4 sourceCropTexUvMinMax 4784
+//float4 sourceCropTexBorderColor 4800
+//float3x3 sourceGarmentMaskTransform 4864
+//float4 sourceGarmentMaskUvMinMax 4912
+//float4 sourceGarmentMaskBorderColor 4928
+//float shaderMaskHalfPx 4944
+//float3x3 shaderMasksTexTransform 5008
+//float4 shaderMasksTexUvMinMax 5056
+//float4 shaderMasksTexBorderColor 5072
+//float gridSampAlpha 5088
+//float4 genTexSize 5104
+//float3x3 genTexTransform 5152
+//float4 genTexUvMinMax 5200
+//float4 genTexBorderColor 5216
+//float genHalfPx 5232
+//float4 drivingHairMaskSize 5248
+//float3x3 drivingHairMaskTransform 5296
+//float4 drivingHairMaskUvMinMax 5344
+//float4 drivingHairMaskBorderColor 5360
+//float segShiftX 5376
+//float segRatioX 5380
+//float segShiftY 5384
+//float segRatioY 5388
+//float genAlpha 5392
+//bool useShaderGridSample 5396
+//}
+//spec_const bool BLEND_MODE_AVERAGE 0 0
+//spec_const bool BLEND_MODE_BRIGHT 1 0
+//spec_const bool BLEND_MODE_COLOR_BURN 2 0
+//spec_const bool BLEND_MODE_COLOR_DODGE 3 0
+//spec_const bool BLEND_MODE_COLOR 4 0
+//spec_const bool BLEND_MODE_DARKEN 5 0
+//spec_const bool BLEND_MODE_DIFFERENCE 6 0
+//spec_const bool BLEND_MODE_DIVIDE 7 0
+//spec_const bool BLEND_MODE_DIVISION 8 0
+//spec_const bool BLEND_MODE_EXCLUSION 9 0
+//spec_const bool BLEND_MODE_FORGRAY 10 0
+//spec_const bool BLEND_MODE_HARD_GLOW 11 0
+//spec_const bool BLEND_MODE_HARD_LIGHT 12 0
+//spec_const bool BLEND_MODE_HARD_MIX 13 0
+//spec_const bool BLEND_MODE_HARD_PHOENIX 14 0
+//spec_const bool BLEND_MODE_HARD_REFLECT 15 0
+//spec_const bool BLEND_MODE_HUE 16 0
+//spec_const bool BLEND_MODE_INTENSE 17 0
+//spec_const bool BLEND_MODE_LIGHTEN 18 0
+//spec_const bool BLEND_MODE_LINEAR_LIGHT 19 0
+//spec_const bool BLEND_MODE_LUMINOSITY 20 0
+//spec_const bool BLEND_MODE_NEGATION 21 0
+//spec_const bool BLEND_MODE_NOTBRIGHT 22 0
+//spec_const bool BLEND_MODE_OVERLAY 23 0
+//spec_const bool BLEND_MODE_PIN_LIGHT 24 0
+//spec_const bool BLEND_MODE_REALISTIC 25 0
+//spec_const bool BLEND_MODE_SATURATION 26 0
+//spec_const bool BLEND_MODE_SOFT_LIGHT 27 0
+//spec_const bool BLEND_MODE_SUBTRACT 28 0
+//spec_const bool BLEND_MODE_VIVID_LIGHT 29 0
+//spec_const bool ENABLE_STIPPLE_PATTERN_TEST 30 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_camTex 31 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_drivingHairMask 32 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_flowRelative 33 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_flowSelection 34 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_genTex 35 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_intensityTexture 36 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_shaderMasksTex 37 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_sourceCropTex 38 0
+//spec_const bool SC_USE_CLAMP_TO_BORDER_sourceGarmentMask 39 0
+//spec_const bool SC_USE_UV_MIN_MAX_camTex 40 0
+//spec_const bool SC_USE_UV_MIN_MAX_drivingHairMask 41 0
+//spec_const bool SC_USE_UV_MIN_MAX_flowRelative 42 0
+//spec_const bool SC_USE_UV_MIN_MAX_flowSelection 43 0
+//spec_const bool SC_USE_UV_MIN_MAX_genTex 44 0
+//spec_const bool SC_USE_UV_MIN_MAX_intensityTexture 45 0
+//spec_const bool SC_USE_UV_MIN_MAX_shaderMasksTex 46 0
+//spec_const bool SC_USE_UV_MIN_MAX_sourceCropTex 47 0
+//spec_const bool SC_USE_UV_MIN_MAX_sourceGarmentMask 48 0
+//spec_const bool SC_USE_UV_TRANSFORM_camTex 49 0
+//spec_const bool SC_USE_UV_TRANSFORM_drivingHairMask 50 0
+//spec_const bool SC_USE_UV_TRANSFORM_flowRelative 51 0
+//spec_const bool SC_USE_UV_TRANSFORM_flowSelection 52 0
+//spec_const bool SC_USE_UV_TRANSFORM_genTex 53 0
+//spec_const bool SC_USE_UV_TRANSFORM_intensityTexture 54 0
+//spec_const bool SC_USE_UV_TRANSFORM_shaderMasksTex 55 0
+//spec_const bool SC_USE_UV_TRANSFORM_sourceCropTex 56 0
+//spec_const bool SC_USE_UV_TRANSFORM_sourceGarmentMask 57 0
+//spec_const bool UseViewSpaceDepthVariant 58 1
+//spec_const bool camTexHasSwappedViews 59 0
+//spec_const bool drivingHairMaskHasSwappedViews 60 0
+//spec_const bool flowRelativeHasSwappedViews 61 0
+//spec_const bool flowSelectionHasSwappedViews 62 0
+//spec_const bool genTexHasSwappedViews 63 0
+//spec_const bool intensityTextureHasSwappedViews 64 0
+//spec_const bool sc_BlendMode_AddWithAlphaFactor 65 0
+//spec_const bool sc_BlendMode_Add 66 0
+//spec_const bool sc_BlendMode_AlphaTest 67 0
+//spec_const bool sc_BlendMode_AlphaToCoverage 68 0
+//spec_const bool sc_BlendMode_ColoredGlass 69 0
+//spec_const bool sc_BlendMode_Custom 70 0
+//spec_const bool sc_BlendMode_Max 71 0
+//spec_const bool sc_BlendMode_Min 72 0
+//spec_const bool sc_BlendMode_MultiplyOriginal 73 0
+//spec_const bool sc_BlendMode_Multiply 74 0
+//spec_const bool sc_BlendMode_Normal 75 0
+//spec_const bool sc_BlendMode_PremultipliedAlphaAuto 76 0
+//spec_const bool sc_BlendMode_PremultipliedAlphaHardware 77 0
+//spec_const bool sc_BlendMode_PremultipliedAlpha 78 0
+//spec_const bool sc_BlendMode_Screen 79 0
+//spec_const bool sc_DepthOnly 80 0
+//spec_const bool sc_FramebufferFetch 81 0
+//spec_const bool sc_MotionVectorsPass 82 0
+//spec_const bool sc_OITCompositingPass 83 0
+//spec_const bool sc_OITDepthBoundsPass 84 0
+//spec_const bool sc_OITDepthGatherPass 85 0
+//spec_const bool sc_OutputBounds 86 0
+//spec_const bool sc_ProjectiveShadowsCaster 87 0
+//spec_const bool sc_ProjectiveShadowsReceiver 88 0
+//spec_const bool sc_RenderAlphaToColor 89 0
+//spec_const bool sc_ScreenTextureHasSwappedViews 90 0
+//spec_const bool sc_TAAEnabled 91 0
+//spec_const bool sc_VertexBlendingUseNormals 92 0
+//spec_const bool sc_VertexBlending 93 0
+//spec_const bool sc_Voxelization 94 0
+//spec_const bool shaderMasksTexHasSwappedViews 95 0
+//spec_const bool sourceCropTexHasSwappedViews 96 0
+//spec_const bool sourceGarmentMaskHasSwappedViews 97 0
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_camTex 98 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_drivingHairMask 99 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_flowRelative 100 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_flowSelection 101 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_genTex 102 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_intensityTexture 103 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_shaderMasksTex 104 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_sourceCropTex 105 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_U_sourceGarmentMask 106 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_camTex 107 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_drivingHairMask 108 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_flowRelative 109 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_flowSelection 110 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_genTex 111 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_intensityTexture 112 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_shaderMasksTex 113 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_sourceCropTex 114 -1
+//spec_const int SC_SOFTWARE_WRAP_MODE_V_sourceGarmentMask 115 -1
+//spec_const int camTexLayout 116 0
+//spec_const int drivingHairMaskLayout 117 0
+//spec_const int flowRelativeLayout 118 0
+//spec_const int flowSelectionLayout 119 0
+//spec_const int genTexLayout 120 0
+//spec_const int intensityTextureLayout 121 0
+//spec_const int sc_DepthBufferMode 122 0
+//spec_const int sc_RenderingSpace 123 -1
+//spec_const int sc_ScreenTextureLayout 124 0
+//spec_const int sc_ShaderCacheConstant 125 0
+//spec_const int sc_SkinBonesCount 126 0
+//spec_const int sc_StereoRenderingMode 127 0
+//spec_const int sc_StereoRendering_IsClipDistanceEnabled 128 0
+//spec_const int shaderMasksTexLayout 129 0
+//spec_const int sourceCropTexLayout 130 0
+//spec_const int sourceGarmentMaskLayout 131 0
+//SG_REFLECTION_END

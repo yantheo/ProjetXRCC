@@ -1,0 +1,82 @@
+- !<AssetImportMetadata/8197e039-c093-9943-d0b9-770606c285c0>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 598e8242-09b4-4d78-b8cf-7d6b220a23e2
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 598e8242-09b4-4d78-b8cf-7d6b220a23e2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> b5dc4905-8204-4cd6-afcc-d3296b16ccb6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/b5dc4905-8204-4cd6-afcc-d3296b16ccb6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9944fd81-ae34-4cb8-938c-0d3abbe620d1
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bboxScript: false
+    cropTexture: false
+    debugBboxMaskImage: false
+    debugBodySegImage: false
+    debugDrivingCropImage: false
+    debugDrivingImage: false
+    debugDrivingSegCropImage: false
+    debugDrivingSegImage: false
+    debugGenImage: false
+    debugGenMaskImage: false
+    debugSmoothFactorImage: false
+    debugWarpFlowImage: false
+    genMLComponent: false
+    gyroCam: false
+    hairSegCropTexture: false
+    segBoxMLComp: false
+    segCropTexture: false
+    segMLComp: false
+    verboseTiming: false
+    warpMLComp: false
+    warpPostProcessMLComp: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - segMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      segBoxMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      warpMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      warpPostProcessMLComp: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      genMLComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      cropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      segCropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      hairSegCropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      bboxScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      debugDrivingImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugDrivingSegImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugDrivingCropImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugDrivingSegCropImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugBboxMaskImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugWarpFlowImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugBodySegImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugGenImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugGenMaskImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      debugSmoothFactorImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      verboseTiming: false
+      gyroCam: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

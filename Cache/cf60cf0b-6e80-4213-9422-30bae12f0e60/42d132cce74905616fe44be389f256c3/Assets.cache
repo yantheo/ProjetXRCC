@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    d55e55a1-06dc-4007-ad1b-de5ebf6674cf: cf60cf0b-6e80-4213-9422-30bae12f0e60/42d132cce74905616fe44be389f256c3/Data/Capture d’écran 2026-04-18 à 23.57.15.png
+  Assets:
+    - !<FileTexture/d55e55a1-06dc-4007-ad1b-de5ebf6674cf>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 1086
+        Height: 1580
+  SourceHash: 42d132cce74905616fe44be389f256c3
+  FileHash: 1afd46c59b41145a0f303d1dfd162557
+  NativePackageItems:
+    []

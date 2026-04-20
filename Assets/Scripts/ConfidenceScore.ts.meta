@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/14ca58ea-214e-4cdc-8ac0-e7be7b33a9df>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f8070a18-2447-4d2d-bed0-5477c1f89b85
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f8070a18-2447-4d2d-bed0-5477c1f89b85
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fc93f647-c0e5-4b84-b63d-39fb4e7443c7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fc93f647-c0e5-4b84-b63d-39fb4e7443c7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 746c0d57-9ce5-4677-9834-b272eaa7c10c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseScores: false
+    displayDuration: false
+    productLabel: false
+    productNames: false
+    scoreContainer: false
+    scoreText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - scoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      productLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      scoreContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      displayDuration: !<float> 4.000000
+      baseScores: !<float[]>
+        - 92.000000
+        - 87.000000
+        - 95.000000
+        - 78.000000
+        - 88.000000
+      productNames: !<string[]>
+        - Zalando — T-shirt Classic
+        - Zalando — Hoodie Urban
+        - Puma — RS-X Sneakers
+        - Puma — Future Rider
+        - Zalando — Bomber Jacket
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text scoreText
+    - // @input Component.Text productLabel
+    - // @input SceneObject scoreContainer
+    - // @input float displayDuration = 4
+    - "// @input float[] baseScores = {92,87,95,78,88}"
+    - '// @input string[] productNames = {"Zalando — T-shirt Classic","Zalando — Hoodie Urban","Puma — RS-X Sneakers","Puma — Future Rider","Zalando — Bomber Jacket"}'

@@ -1,0 +1,2811 @@
+- !<AssetImportMetadata/b43f8632-e90e-f9c0-a0ce-6c14e42685f0>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> dc5662d0-394c-4e5c-9a3b-6f24f93a3e0e
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> dc5662d0-394c-4e5c-9a3b-6f24f93a3e0e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 9c521790-4373-49a3-a85b-8cf0ef930ed4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefab/029502eb-186b-4a4d-80db-474c6bba6820>
+  PackagePath: GarmentTransferAssets/CC/SwagML
+  objects:
+    - !<own> 5233e479-17ee-432e-97c7-dc4386d7cf19
+  LazyLoading: false
+  RetainAssets: true
+- !<ScreenTransform/07c46091-aa90-4045-b2ac-8dd43e3c31db>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<MLComponent/08b9aed5-a418-433c-b667-09a54793354e>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 4
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: image
+      Shape: {x: 256.000000, y: 512.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: false
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: prev_hair_mask
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: false
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: prev_ug_mask
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: false
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: mask_hair
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: mask_ug
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> f99e7a81-0125-443c-b763-5cf268ce70ca
+- !<SceneObject/08e96b9c-2b2f-4743-966f-fd4b0a88ae84>
+  PrefabRemaps:
+    []
+  Name: WarpingPostProcessMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8d7a8ecf-b4f3-4882-b706-d2149ebacc54
+- !<Camera/1931772e-c090-45cc-a3d8-15bdff845e9a>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  renderLayer: 8
+  MipmapLevel: 0
+  RenderOrder: 10
+  Size: 20.000000
+  Near: 1.000000
+  Far: 200.000000
+  Fov: 60.000004
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: Value
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Orthographic
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> 7c081639-aeb1-4bc1-b38c-f959eaa75ed0
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/1e902dc1-469d-4647-a75a-14fd2da4da64>
+  PrefabRemaps:
+    []
+  Name: SwagMLAPI
+  Enabled: true
+  ScriptAsset: !<reference> 26af4923-0bfd-4965-a220-e6610bbc16d7
+  ScriptInputsDefault:
+    targetImage: true
+    garmentImage: true
+    garmentMask: true
+    debugTextures: true
+    forceSkipGenerator: true
+    forceDt: true
+    cpuMLComps: true
+    warpingPostProcessOne: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      autoRun: true
+      targetImage: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      garmentImage: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      garmentMask: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      debugTextures: false
+      sourcePredictionScript: !<reference.ScriptComponent> 540b0c17-8664-480e-a25c-2933005facfa
+      drivingPredictionScript: !<reference.ScriptComponent> c4941a83-793d-412c-9772-ae9c8eeca2c3
+      modelBuilder: !<reference.ScriptComponent> 6e600932-f523-48d2-9e5a-f867fbc574d7
+      outputTexture: !<reference.Texture> 7c081639-aeb1-4bc1-b38c-f959eaa75ed0
+      genOutput: !<reference.SceneObject> 7afdd05b-f15f-4606-8d02-bedd90072213
+      outputCam: !<reference.Camera> 1931772e-c090-45cc-a3d8-15bdff845e9a
+      catTracker: !<reference.SceneObject> 87b1f199-4644-4db0-99d6-b3dd2103ca2c
+      genOutputShader: !<reference.Material> 28904b6c-247b-4f23-b414-8b31979f7412
+      useGridSampleShader: true
+      forceSkipGenerator: false
+      forceDt: false
+      noGenOutputShader: !<reference.Material> 0ae213d4-e3f9-4d6e-a34b-04ddc20a375e
+      showTimings: true
+      sourceTimingsText: !<reference.Text> 0005e7d7-797b-d994-0000-0000000bb45d
+      drivingTimingsText: !<reference.Text> 0005e7d7-797c-78a4-0000-0000000bb575
+      drivingTexture: !<reference.Texture> 9f41849c-5fb3-46a7-b6d6-d8a9903bf00a
+      windowsCpuMLComps: !<reference.MLComponent[]>
+        - !<reference> 98cdcfcf-68ac-4849-931e-94485c3d209c
+        - !<reference> e95a5d38-5455-4629-ac30-1f7bc1765886
+      cpuMLComps: !<reference.MLComponent[]>
+        []
+      androidCpuMLComps: !<reference.MLComponent[]>
+        - !<reference> 98cdcfcf-68ac-4849-931e-94485c3d209c
+        - !<reference> e95a5d38-5455-4629-ac30-1f7bc1765886
+      warpingPostProcessOne: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      warpingPostProcessMulti: !<reference.MLComponent> 8d7a8ecf-b4f3-4882-b706-d2149ebacc54
+  ScriptTypes:
+    "":
+      {}
+- !<ScreenTransform/2eeaeb04-0651-4114-bc1c-46219ab98fa5>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<SceneObject/36813b27-e573-43f7-aadd-f1a04e3ea618>
+  PrefabRemaps:
+    []
+  Name: WarpingMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c90cae43-dbd8-46a6-8b7d-f6e99c9c2e33
+- !<SceneObject/3849f204-0300-4e14-9494-180468469b22>
+  PrefabRemaps:
+    []
+  Name: Full Frame Region 0
+  Enabled: true
+  Layers: 8
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7afdd05b-f15f-4606-8d02-bedd90072213
+  Components:
+    - !<own> 7306aa4f-4db3-410a-b1ec-c985d6bde413
+    - !<own> eb8b0ecf-565f-4df4-8e65-70fbded4bd32
+- !<SceneObject/40f7a243-99b2-40ed-bbe5-4cb9c647eae3>
+  PrefabRemaps:
+    []
+  Name: DrivingSegMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 08b9aed5-a418-433c-b667-09a54793354e
+- !<MLComponent/459084ba-4ae2-45fd-a7d2-c64228109093>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 0
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: image
+      Shape: {x: 256.000000, y: 512.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: false
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: prev_hair_mask
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: prev_ug_mask
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: mask_hair
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: mask_ug
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> f99e7a81-0125-443c-b763-5cf268ce70ca
+- !<SceneObject/46bbbdcc-3e56-46b9-9b31-25f2ecf793a6>
+  PrefabRemaps:
+    []
+  Name: Full Frame Region 0
+  Enabled: true
+  Layers: 64
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 85757a0a-ada4-4239-8d1c-b80d94cbff68
+  Components:
+    - !<own> 5982bd72-b7ce-47c8-9cb8-81b8289545f3
+    - !<own> e613b770-7b29-4c76-a485-cf8713fdb70e
+- !<SceneObject/483810dd-b450-4abc-a4d4-24fb3d7dec9e>
+  PrefabRemaps:
+    []
+  Name: SourceSegBoxMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 98cdcfcf-68ac-4849-931e-94485c3d209c
+- !<Image/4cf35c62-03cb-4cca-a5de-952f5b399d51>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 2
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 28904b6c-247b-4f23-b414-8b31979f7412
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/5233e479-17ee-432e-97c7-dc4386d7cf19>
+  PrefabRemaps:
+    []
+  Name: SwagML
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c8d18ea0-c58c-40e9-ba67-f2de2ae4aaf1
+    - !<own> 78bfad4a-2bf7-48d8-a91c-20021d14c94a
+    - !<own> ab292781-b720-4142-a50e-e28b6aeeef8a
+    - !<own> 545eb974-910b-4432-b36c-e1b6b62c8d9f
+    - !<own> 8be65a27-e09a-475b-925f-2a855cd82ed9
+  Components:
+    []
+- !<ScriptComponent/540b0c17-8664-480e-a25c-2933005facfa>
+  PrefabRemaps:
+    []
+  Name: SourcePrediction
+  Enabled: true
+  ScriptAsset: !<reference> 8c582f96-a028-49bd-aa31-134de90f12a2
+  ScriptInputsDefault:
+    sourceSegTexture: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      segMLComp: !<reference.MLComponent> 459084ba-4ae2-45fd-a7d2-c64228109093
+      segBoxMLComp: !<reference.MLComponent> 98cdcfcf-68ac-4849-931e-94485c3d209c
+      dpMLComp: !<reference.MLComponent> 84e0c271-47ec-4d0e-9d39-0afb58efa198
+      warpMLComp: !<reference.MLComponent> c90cae43-dbd8-46a6-8b7d-f6e99c9c2e33
+      warpPostProcessMLComp: !<reference.MLComponent> 8d7a8ecf-b4f3-4882-b706-d2149ebacc54
+      genMLComp: !<reference.MLComponent> 721ab377-8996-4640-b4c8-c431df4e6063
+      cropTexture: !<reference.Texture> f4b6a483-0b94-4b61-ab47-55b8918de84f
+      cropSegTexture: !<reference.Texture> 2363a2d7-0523-4656-b667-fb52aa456fc8
+      sourceSegTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      debugSourceImage: !<reference.Image> 0005e7d7-7974-9f18-0000-0000000ba7a8
+      debugSourceSegImage: !<reference.Image> 0005e7d7-7974-ff6b-0000-0000000ba866
+      debugSourceCropImage: !<reference.Image> 0005e7d7-7975-769c-0000-0000000ba933
+      debugSourceSegCropImage: !<reference.Image> 0005e7d7-7975-e8eb-0000-0000000baa00
+      debugSourceDPImage: !<reference.Image> 0005e7d7-7976-6790-0000-0000000baada
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/545eb974-910b-4432-b36c-e1b6b62c8d9f>
+  PrefabRemaps:
+    []
+  Name: Eraser Camera
+  Enabled: false
+  Layers: 32
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7b145997-6ea1-4fb4-917b-184cf6772295
+  Components:
+    - !<own> aaf147ec-eebe-4804-a667-3df1344a7930
+- !<SceneObject/5716e111-8e14-4eef-a613-08af28407a18>
+  PrefabRemaps:
+    []
+  Name: Custom Object Tracking 0
+  Enabled: true
+  Layers: 8
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 834f306f-b283-4c38-bc40-86cd6afaaae0
+- !<ScreenRegionComponent/5982bd72-b7ce-47c8-9cb8-81b8289545f3>
+  PrefabRemaps:
+    []
+  Name: Screen Region
+  Enabled: true
+  ScreenRegionType: FullFrame
+  ResizeWithKeyboard: false
+- !<Image/6577df49-5660-441a-b06c-29b53a2bd674>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 00000000-0000-0000-0000-000000000000
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/6e600932-f523-48d2-9e5a-f867fbc574d7>
+  PrefabRemaps:
+    []
+  Name: ModelBuilder
+  Enabled: true
+  ScriptAsset: !<reference> b1a9cb00-63fb-4f66-a805-3ff813dc86a1
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<MLComponent/721ab377-8996-4640-b4c8-c431df4e6063>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 7
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: confident_regions
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: deformed_source
+      Shape: {x: 97.000000, y: 97.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: deformed_source_body_seg
+      Shape: {x: 97.000000, y: 97.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: deformed_source_mask
+      Shape: {x: 97.000000, y: 97.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: driving_body_seg
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: driving_image
+      Shape: {x: 193.000000, y: 193.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: driving_mask_ug
+      Shape: {x: 193.000000, y: 193.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: selection_mask
+      Shape: {x: 97.000000, y: 97.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: swapnet_inputs
+      Shape: {x: 97.000000, y: 97.000000, z: 16.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer: ~
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: pred
+      Shape: {x: 193.000000, y: 193.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: shader_masks
+      Shape: {x: 193.000000, y: 193.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> e1ab7012-216c-40c8-b1dc-d8ed799a8ad2
+- !<ScreenRegionComponent/7306aa4f-4db3-410a-b1ec-c985d6bde413>
+  PrefabRemaps:
+    []
+  Name: Screen Region
+  Enabled: true
+  ScreenRegionType: FullFrame
+  ResizeWithKeyboard: false
+- !<SceneObject/78bfad4a-2bf7-48d8-a91c-20021d14c94a>
+  PrefabRemaps:
+    []
+  Name: Models
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 80.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d8418f64-e15e-4814-b83e-a5d073fc14c7
+    - !<own> 483810dd-b450-4abc-a4d4-24fb3d7dec9e
+    - !<own> e1a9b1a2-3b33-4cdc-bcaa-d9137372bfe0
+    - !<own> 08e96b9c-2b2f-4743-966f-fd4b0a88ae84
+    - !<own> 40f7a243-99b2-40ed-bbe5-4cb9c647eae3
+    - !<own> 82a524c2-47e4-4ab6-824f-4f22f85cd23d
+    - !<own> 36813b27-e573-43f7-aadd-f1a04e3ea618
+    - !<own> d1ee3fab-bb52-4b00-b071-d68ce9966ace
+  Components:
+    - !<own> 540b0c17-8664-480e-a25c-2933005facfa
+    - !<own> c4941a83-793d-412c-9772-ae9c8eeca2c3
+    - !<own> 8fad0a88-37fd-4013-b35c-4e495dab5923
+- !<SceneObject/7a96bb6e-7527-479d-a9e4-08dfde6b78cb>
+  PrefabRemaps:
+    []
+  Name: Custom Object Tracking 0
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5716e111-8e14-4eef-a613-08af28407a18
+  Components:
+    - !<own> b814a1c1-9b43-4514-8415-0997584178ad
+    - !<own> d4068cb5-cdf8-4c24-bc61-cd92c84a8248
+- !<SceneObject/7afdd05b-f15f-4606-8d02-bedd90072213>
+  PrefabRemaps:
+    []
+  Name: Output Image
+  Enabled: true
+  Layers: 8
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 07c46091-aa90-4045-b2ac-8dd43e3c31db
+    - !<own> 4cf35c62-03cb-4cca-a5de-952f5b399d51
+- !<SceneObject/7b145997-6ea1-4fb4-917b-184cf6772295>
+  PrefabRemaps:
+    []
+  Name: Eraser Prefab
+  Enabled: false
+  Layers: 32
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 97118e6e-cfb3-43b9-a6c8-d2f2904394a7
+- !<ScreenTransform/7f4002fe-2b03-45e6-96fb-a6a2d5640217>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<SceneObject/82a524c2-47e4-4ab6-824f-4f22f85cd23d>
+  PrefabRemaps:
+    []
+  Name: DrivingSegBoxMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e95a5d38-5455-4629-ac30-1f7bc1765886
+- !<ScreenTransform/834f306f-b283-4c38-bc40-86cd6afaaae0>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<MLComponent/84e0c271-47ec-4d0e-9d39-0afb58efa198>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 2
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: driving_image
+      Shape: {x: 257.000000, y: 257.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: prev_drv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 48.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer: ~
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: smooth_factor
+      Shape: {x: 17.000000, y: 17.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: src_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 48.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer: ~
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: bbox_mask
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: confident_regions
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: deform_confidence
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: driving_body_seg
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: driving_person_score
+      Shape: {x: 1.000000, y: 1.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: drv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 48.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_0
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_1
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_2
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_3
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_4
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_selection_logits_01
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_selection_logits_23
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_selection_logits_45
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: source_parts_01
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: source_parts_23
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: source_parts_45
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: swapnet_uv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> 356cb937-eca9-4726-a2ed-ff4b48a82ed5
+- !<Camera/85308de8-6647-4688-9306-e782a8aa1dcf>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  renderLayer: 64
+  MipmapLevel: 0
+  RenderOrder: 8
+  Size: 20.000000
+  Near: 1.000000
+  Far: 1000.000000
+  Fov: 60.000004
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: None
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Orthographic
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> 742e189f-822d-4a13-9313-0f63cc43415a
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/85757a0a-ada4-4239-8d1c-b80d94cbff68>
+  PrefabRemaps:
+    []
+  Name: Eraser Mask Image
+  Enabled: true
+  Layers: 64
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2eeaeb04-0651-4114-bc1c-46219ab98fa5
+    - !<own> 6577df49-5660-441a-b06c-29b53a2bd674
+- !<SceneObject/87b1f199-4644-4db0-99d6-b3dd2103ca2c>
+  PrefabRemaps:
+    []
+  Name: CatTracker
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7a96bb6e-7527-479d-a9e4-08dfde6b78cb
+  Components:
+    - !<own> 7f4002fe-2b03-45e6-96fb-a6a2d5640217
+- !<SceneObject/8be65a27-e09a-475b-925f-2a855cd82ed9>
+  PrefabRemaps:
+    []
+  Name: OutputCam
+  Enabled: true
+  Layers: 8
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3849f204-0300-4e14-9494-180468469b22
+    - !<own> 87b1f199-4644-4db0-99d6-b3dd2103ca2c
+  Components:
+    - !<own> 1931772e-c090-45cc-a3d8-15bdff845e9a
+    - !<own> c8339eef-0c6e-4ab6-9077-15f35e688c9b
+- !<MLComponent/8d7a8ecf-b4f3-4882-b706-d2149ebacc54>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 3
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: source_image
+      Shape: {x: 193.000000, y: 193.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: source_mask
+      Shape: {x: 193.000000, y: 193.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: source_body_seg
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: deform_confidence
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_relative_0
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_relative_1
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_relative_2
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_relative_3
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_relative_4
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_selection_logits_01
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_selection_logits_23
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: flow_selection_logits_45
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: source_parts_01
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: source_parts_23
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: source_parts_45
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: swapnet_uv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: selection_mask
+      Shape: {x: 97.000000, y: 97.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: deformed_source
+      Shape: {x: 97.000000, y: 97.000000, z: 3.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: deformed_source_mask
+      Shape: {x: 97.000000, y: 97.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: deformed_source_body_seg
+      Shape: {x: 97.000000, y: 97.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: swapnet_inputs
+      Shape: {x: 97.000000, y: 97.000000, z: 16.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> 045e4d98-2f0d-44ab-af64-1e5acb90156e
+- !<ScriptComponent/8fad0a88-37fd-4013-b35c-4e495dab5923>
+  PrefabRemaps:
+    []
+  Name: BboxCalculator
+  Enabled: true
+  ScriptAsset: !<reference> 64dbe556-98d0-4b69-8d60-d9dddce6ef17
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<PostEffectVisual/97118e6e-cfb3-43b9-a6c8-d2f2904394a7>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 1
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 00000000-0000-0000-0000-000000000000
+- !<MLComponent/98cdcfcf-68ac-4849-931e-94485c3d209c>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 1
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: mask
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: false
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: box
+      Shape: {x: 1.000000, y: 1.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> 76499a02-2b93-47c6-84a7-d18e9d100314
+- !<ObjectPrefabAssetData/9c521790-4373-49a3-a85b-8cf0ef930ed4>
+  SourceRemaps:
+    - 028146c1-3f2b-4917-a5cd-4df8ffec9ad5: d8418f64-e15e-4814-b83e-a5d073fc14c7
+    - 03f72ed0-03c2-4da7-b5a5-e02d26a671a7: 36813b27-e573-43f7-aadd-f1a04e3ea618
+    - 0836e35b-cc15-4181-87d0-2b9d75e08772: 5716e111-8e14-4eef-a613-08af28407a18
+    - 0d45de51-83eb-4256-a100-26f3b1230f16: 721ab377-8996-4640-b4c8-c431df4e6063
+    - 0e61bc6d-8984-4d16-ae2f-dfea03e56113: 82a524c2-47e4-4ab6-824f-4f22f85cd23d
+    - 11ac466d-acc2-415a-ac9b-9b004901d43d: e1a9b1a2-3b33-4cdc-bcaa-d9137372bfe0
+    - 126c17f2-cd93-401a-996f-12e0cf408406: 07c46091-aa90-4045-b2ac-8dd43e3c31db
+    - 19926d1a-13b7-46ff-9c4e-5852b7219c62: e95a5d38-5455-4629-ac30-1f7bc1765886
+    - 21e26a9a-6619-4e30-8039-6da4d1dc55c6: 8d7a8ecf-b4f3-4882-b706-d2149ebacc54
+    - 22387f58-f5a0-4a60-9f41-f50d74182cee: 1e902dc1-469d-4647-a75a-14fd2da4da64
+    - 25b3be87-2e35-4dd5-bf87-10d5091bad3b: 7a96bb6e-7527-479d-a9e4-08dfde6b78cb
+    - 2dee5eba-e4cd-4611-9558-d087b84b7f17: 540b0c17-8664-480e-a25c-2933005facfa
+    - 33cb56ae-54e3-420c-a44b-93938001daed: 97118e6e-cfb3-43b9-a6c8-d2f2904394a7
+    - 4501efb9-63bd-4e37-9ee1-947c31466848: 85308de8-6647-4688-9306-e782a8aa1dcf
+    - 4537e562-c791-43ca-9b5e-2b528541139e: 6577df49-5660-441a-b06c-29b53a2bd674
+    - 4e6f7a9e-7ba7-4b76-b6c2-bfa44cf0635e: 545eb974-910b-4432-b36c-e1b6b62c8d9f
+    - 4fafb3c3-f039-48d8-8412-65dc97bbc7ce: c4941a83-793d-412c-9772-ae9c8eeca2c3
+    - 5f886b01-dc28-4b7a-8eaa-780ed09e9c21: 7afdd05b-f15f-4606-8d02-bedd90072213
+    - 6753e9dd-16da-446a-9ecd-938024ab722d: 834f306f-b283-4c38-bc40-86cd6afaaae0
+    - 7dcaec08-55e0-4c70-aa31-0732e0dbc89f: eb8b0ecf-565f-4df4-8e65-70fbded4bd32
+    - 862d012e-3925-4962-a040-888e06c24379: 87b1f199-4644-4db0-99d6-b3dd2103ca2c
+    - 897772ef-c695-4a51-93e6-93a10573caa3: 78bfad4a-2bf7-48d8-a91c-20021d14c94a
+    - 8b0e0817-347f-4b21-90d3-0da594d20d9e: ab292781-b720-4142-a50e-e28b6aeeef8a
+    - 8c5b7da3-8c92-4a87-b59d-afd428c507d7: 483810dd-b450-4abc-a4d4-24fb3d7dec9e
+    - 91bd4d83-09f3-4bce-934d-5c125112333b: 08e96b9c-2b2f-4743-966f-fd4b0a88ae84
+    - 9279fd8e-2e2a-4529-8b9d-5e02d1265eed: 2eeaeb04-0651-4114-bc1c-46219ab98fa5
+    - 94209e1b-63d0-4762-b13d-5ba37586c487: 7f4002fe-2b03-45e6-96fb-a6a2d5640217
+    - 95bbde3b-f7aa-45b7-825f-d96cf4405af4: d4068cb5-cdf8-4c24-bc61-cd92c84a8248
+    - a299eb92-40a1-4455-bf11-d6bb3d281326: c90cae43-dbd8-46a6-8b7d-f6e99c9c2e33
+    - a51ce468-ca09-4d5d-9d6d-e19dfcae7747: 40f7a243-99b2-40ed-bbe5-4cb9c647eae3
+    - a5fd2189-f765-43d7-a613-03d35ade419b: b814a1c1-9b43-4514-8415-0997584178ad
+    - a6634910-ae64-492c-932a-9b7c65101e83: c8339eef-0c6e-4ab6-9077-15f35e688c9b
+    - a6780637-98c2-4ed0-9d67-655e20f5760d: 85757a0a-ada4-4239-8d1c-b80d94cbff68
+    - ad7a94a7-5df3-4d05-bcd3-67004ae71def: 8fad0a88-37fd-4013-b35c-4e495dab5923
+    - af835800-cffd-4d84-90c5-0ded09dd54d9: 08b9aed5-a418-433c-b667-09a54793354e
+    - c11d5403-9adb-44da-81c0-728a44f7b628: 8be65a27-e09a-475b-925f-2a855cd82ed9
+    - c255c482-0f62-4592-9d30-96fda724a0dd: aaf147ec-eebe-4804-a667-3df1344a7930
+    - c536dbfb-c76a-4c8d-9753-30e04983e601: d1ee3fab-bb52-4b00-b071-d68ce9966ace
+    - c67ed9aa-22fa-4006-8cac-b02f501633c8: c8d18ea0-c58c-40e9-ba67-f2de2ae4aaf1
+    - c9392574-3213-4400-a141-574b91461dd8: 7306aa4f-4db3-410a-b1ec-c985d6bde413
+    - cf95ea1e-7c03-4a33-a8a3-bbaf3a400107: 5233e479-17ee-432e-97c7-dc4386d7cf19
+    - d14c1158-c793-4845-9356-52aa0c2b2d8c: 1931772e-c090-45cc-a3d8-15bdff845e9a
+    - d887da9d-8970-4459-a39a-672f392db91b: 6e600932-f523-48d2-9e5a-f867fbc574d7
+    - da967f6e-3f5f-4af7-ab0e-ae4751a16a56: 46bbbdcc-3e56-46b9-9b31-25f2ecf793a6
+    - dc5662d0-394c-4e5c-9a3b-6f24f93a3e0e: 029502eb-186b-4a4d-80db-474c6bba6820
+    - dfe47782-d3f3-43b6-a5cd-f0604ea8a830: 459084ba-4ae2-45fd-a7d2-c64228109093
+    - e0974713-abfd-4362-9182-836204bb56d6: 5982bd72-b7ce-47c8-9cb8-81b8289545f3
+    - e1993dd1-3fb6-4d93-94ab-13087ad066af: 84e0c271-47ec-4d0e-9d39-0afb58efa198
+    - e8a05774-2337-4c89-8649-4fbe44b11b90: e613b770-7b29-4c76-a485-cf8713fdb70e
+    - f04d92b2-0148-44a6-b378-833580992c66: 3849f204-0300-4e14-9494-180468469b22
+    - f16e1cb3-d7e2-486d-b5a6-0584ca71e9ac: 4cf35c62-03cb-4cca-a5de-952f5b399d51
+    - fb9975b1-bcf7-4d70-885c-14b5b0331c06: 98cdcfcf-68ac-4849-931e-94485c3d209c
+    - fd14b339-7500-427b-b822-0124691f6fdd: 7b145997-6ea1-4fb4-917b-184cf6772295
+  SourceState: !<own> 029502eb-186b-4a4d-80db-474c6bba6820
+- !<Camera/aaf147ec-eebe-4804-a667-3df1344a7930>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  renderLayer: 32
+  MipmapLevel: 0
+  RenderOrder: 9
+  Size: 20.000000
+  Near: 1.000000
+  Far: 1000.000000
+  Fov: 60.000004
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: None
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Orthographic
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> 78ee5c97-837b-474b-a6d7-8dbe9a18ba4a
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/ab292781-b720-4142-a50e-e28b6aeeef8a>
+  PrefabRemaps:
+    []
+  Name: Eraser Mask Camera
+  Enabled: false
+  Layers: 64
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 46bbbdcc-3e56-46b9-9b31-25f2ecf793a6
+  Components:
+    - !<own> 85308de8-6647-4688-9306-e782a8aa1dcf
+- !<ScreenTransform/b814a1c1-9b43-4514-8415-0997584178ad>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<ScriptComponent/c4941a83-793d-412c-9772-ae9c8eeca2c3>
+  PrefabRemaps:
+    []
+  Name: DrivingPrediction
+  Enabled: true
+  ScriptAsset: !<reference> 598e8242-09b4-4d78-b8cf-7d6b220a23e2
+  ScriptInputsDefault:
+    verboseTiming: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      segMLComp: !<reference.MLComponent> 08b9aed5-a418-433c-b667-09a54793354e
+      segBoxMLComp: !<reference.MLComponent> e95a5d38-5455-4629-ac30-1f7bc1765886
+      warpMLComp: !<reference.MLComponent> c90cae43-dbd8-46a6-8b7d-f6e99c9c2e33
+      warpPostProcessMLComp: !<reference.MLComponent> 8d7a8ecf-b4f3-4882-b706-d2149ebacc54
+      genMLComponent: !<reference.MLComponent> 721ab377-8996-4640-b4c8-c431df4e6063
+      cropTexture: !<reference.Texture> 4c5f0932-0cdb-4b31-9ab2-1d24012ea8b7
+      segCropTexture: !<reference.Texture> c21b8677-327e-4129-8d66-d9c1de9a00f9
+      hairSegCropTexture: !<reference.Texture> 6e0db8d9-03d0-439c-8bbe-1600f5b8aef5
+      bboxScript: !<reference.ScriptComponent> 8fad0a88-37fd-4013-b35c-4e495dab5923
+      debugDrivingImage: !<reference.Image> 0005e7d7-7977-256a-0000-0000000bac2b
+      debugDrivingSegImage: !<reference.Image> 0005e7d7-7977-a260-0000-0000000bacf8
+      debugDrivingCropImage: !<reference.Image> 0005e7d7-7978-16e6-0000-0000000badc4
+      debugDrivingSegCropImage: !<reference.Image> 0005ff7c-d1f2-0dfb-0000-000000017d82
+      debugBboxMaskImage: !<reference.Image> 0005e7d7-7978-ffa7-0000-0000000baf5d
+      debugWarpFlowImage: !<reference.Image> 0005e7d7-7979-769c-0000-0000000bb02a
+      debugBodySegImage: !<reference.Image> 0005e7d7-7979-f093-0000-0000000bb0f7
+      debugGenImage: !<reference.Image> 0005e7d7-797a-6369-0000-0000000bb1c4
+      debugGenMaskImage: !<reference.Image> 0005e7d7-797a-daa0-0000-0000000bb291
+      debugSmoothFactorImage: !<reference.Image> 00061b01-6626-2f8d-0000-00000008e6e3
+      verboseTiming: false
+      gyroCam: !<reference.Camera> 1931772e-c090-45cc-a3d8-15bdff845e9a
+  ScriptTypes:
+    "":
+      {}
+- !<DeviceTracking/c8339eef-0c6e-4ab6-9077-15f35e688c9b>
+  PrefabRemaps:
+    []
+  Name: Device Tracking
+  Enabled: true
+  DeviceTrackingMode: Rotation
+  RotationOptions: !<RotationOptions>
+    InvertRotation: false
+  SurfaceOptions: !<SurfaceOptions>
+    EnhanceWithNativeAR: false
+- !<SceneObject/c8d18ea0-c58c-40e9-ba67-f2de2ae4aaf1>
+  PrefabRemaps:
+    []
+  Name: SwagMLAPI
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1e902dc1-469d-4647-a75a-14fd2da4da64
+    - !<own> 6e600932-f523-48d2-9e5a-f867fbc574d7
+- !<MLComponent/c90cae43-dbd8-46a6-8b7d-f6e99c9c2e33>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 6
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: driving_image
+      Shape: {x: 257.000000, y: 257.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: prev_drv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 48.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer: ~
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: smooth_factor
+      Shape: {x: 17.000000, y: 17.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: true
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLInput>
+      Name: src_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 48.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer: ~
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: bbox_mask
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: confident_regions
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: deform_confidence
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: driving_body_seg
+      Shape: {x: 33.000000, y: 33.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: driving_person_score
+      Shape: {x: 1.000000, y: 1.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: drv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 48.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_0
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_1
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_2
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_3
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_relative_4
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_selection_logits_01
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_selection_logits_23
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: flow_selection_logits_45
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: source_parts_01
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: source_parts_23
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: source_parts_45
+      Shape: {x: 33.000000, y: 33.000000, z: 2.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+    - !<MLOutput>
+      Name: swapnet_uv_emb
+      Shape: {x: 33.000000, y: 33.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> 356cb937-eca9-4726-a2ed-ff4b48a82ed5
+- !<SceneObject/d1ee3fab-bb52-4b00-b071-d68ce9966ace>
+  PrefabRemaps:
+    []
+  Name: GeneratorMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 721ab377-8996-4640-b4c8-c431df4e6063
+- !<ObjectTracking/d4068cb5-cdf8-4c24-bc61-cd92c84a8248>
+  PrefabRemaps:
+    []
+  Name: Object Tracking
+  Enabled: true
+  ObjectTrackingType: Cat
+  Model: !<reference> 00000000-0000-0000-0000-000000000000
+  AttachmentPoint: center
+- !<SceneObject/d8418f64-e15e-4814-b83e-a5d073fc14c7>
+  PrefabRemaps:
+    []
+  Name: SourceSegMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 459084ba-4ae2-45fd-a7d2-c64228109093
+- !<SceneObject/e1a9b1a2-3b33-4cdc-bcaa-d9137372bfe0>
+  PrefabRemaps:
+    []
+  Name: SourceDensePoseMLComp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 84e0c271-47ec-4d0e-9d39-0afb58efa198
+- !<ScreenTransform/e613b770-7b29-4c76-a485-cf8713fdb70e>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<MLComponent/e95a5d38-5455-4629-ac30-1f7bc1765886>
+  PrefabRemaps:
+    []
+  Name: ML Component
+  Enabled: true
+  RenderOrder: 5
+  AutoBuild: false
+  AutoRun: false
+  Inputs:
+    - !<MLInput>
+      Name: mask
+      Shape: {x: 256.000000, y: 512.000000, z: 1.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+      Transformer:
+        stretch: false
+        alignment.horizontal: Center
+        alignment.vertical: Center
+        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        flipX: false
+        flipY: false
+        rotation: None
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outputs:
+    - !<MLOutput>
+      Name: box
+      Shape: {x: 1.000000, y: 1.000000, z: 4.000000}
+      Normalizations:
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+        - scale: 1.000000
+          bias: 0.000000
+      InputName: ""
+      OutputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Model: !<reference> 76499a02-2b93-47c6-84a7-d18e9d100314
+- !<ScreenTransform/eb8b0ecf-565f-4df4-8e65-70fbded4bd32>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000

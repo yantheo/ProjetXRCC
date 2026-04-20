@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/f35aa7c9-92a7-417e-9b14-6028f4f96186>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ee2ffa98-6415-4cfb-a806-782deea0f7ed
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ee2ffa98-6415-4cfb-a806-782deea0f7ed
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> cf23bccd-5190-48e1-be12-00482c7a94cc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/cf23bccd-5190-48e1-be12-00482c7a94cc>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b1cb0f42-1fcc-4cca-a4a3-bd7211f62ea7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    garments: false
+    gt: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - gt: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      garments: !<reference.Texture[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.ScriptComponent gt
+    - "// @input Asset.Texture[] garments = {}"

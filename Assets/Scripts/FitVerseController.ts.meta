@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/548c82e0-2ba3-4d95-9269-fc8662850561>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 79cd5134-7d67-4cb8-a07c-48f55f767138
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 79cd5134-7d67-4cb8-a07c-48f55f767138
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1d41dfe7-d082-4d77-b083-80c4ce0c0384
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1d41dfe7-d082-4d77-b083-80c4ce0c0384>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f907ce02-2c76-4ce9-94a1-2c2d28cba454
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyMeshContainer: false
+    carouselObject: false
+    confidenceScoreObject: false
+    garmentSwitcherObject: false
+    garmentTransferContainer: false
+    scoreDelay: false
+    startMode: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - garmentSwitcherObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      carouselObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      confidenceScoreObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      garmentTransferContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bodyMeshContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startMode: garment_transfer
+      scoreDelay: !<float> 2.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject garmentSwitcherObject
+    - // @input SceneObject carouselObject
+    - // @input SceneObject confidenceScoreObject
+    - // @input SceneObject garmentTransferContainer
+    - // @input SceneObject bodyMeshContainer
+    - '// @input string startMode = "garment_transfer"'
+    - // @input float scoreDelay = 2

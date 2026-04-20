@@ -1,0 +1,16 @@
+- !<AssetImportMetadata/755b362e-ef2a-cfcf-e262-9c6aff6a5457>
+  ImportedAssetIds:
+    RemoteMLAsset: !<reference> e1ab7012-216c-40c8-b1dc-d8ed799a8ad2
+  ImporterName: RemoteMLAssetImporter
+  PrimaryAsset: !<reference> e1ab7012-216c-40c8-b1dc-d8ed799a8ad2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

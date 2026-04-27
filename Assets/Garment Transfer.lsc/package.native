@@ -95,11 +95,11 @@
     []
   Instantiable: !<reference> 2007a434-b7d1-4ca0-8f52-92bd4249d9f9
   AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
-    Name: ""
-    AssetId: ""
-    Hash: ""
+    Name: Garment Transfer
+    AssetId: 4kk8R0d3HzSBW1SrZPJhL2
+    Hash: 98954eb625acf960d6caf9fb45b94c95
     Version:
-      major: 0
-      minor: 0
+      major: 16
+      minor: 1
       patch: 0
       build: 0

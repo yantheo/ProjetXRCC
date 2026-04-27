@@ -1,4 +1,4 @@
-- !<AssetImportMetadata/7d607710-1902-0181-e6d5-dcd59e3f5c39>
+- !<AssetImportMetadata/81483742-675f-e402-0fe9-c3f41a044057>
   ImportedAssetIds:
     ObjectPrefab: !<reference> dc5662d0-394c-4e5c-9a3b-6f24f93a3e0e
   ImporterName: ObjectPrefabImporter
@@ -1174,7 +1174,7 @@
   Model: !<reference> 00000000-0000-0000-0000-000000000000
   AttachmentPoint: center
 - !<ObjectPrefabAssetData/9c521790-4373-49a3-a85b-8cf0ef930ed4>
-  Prototype: !<ObjectOwner/4cbc245d-1a63-4bfb-9f9e-eb9309b514b5>
+  Prototype: !<ObjectOwner/1b2aa37e-2555-44b9-82fa-b21c94c4a197>
     PackagePath: ""
     objects:
       - !<own> cf95ea1e-7c03-4a33-575c-4450c5bffef8

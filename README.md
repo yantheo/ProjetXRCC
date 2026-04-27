@@ -42,14 +42,30 @@ Snap Spectacles       — Hardware cible
 **1. Clone le repo**
 ```bash
 git clone git@github.com:yantheo/ProjetXRCC.git
-cd FitVerseLens
+cd ProjetXRCC
 ```
 
 **2. Ouvre dans Lens Studio**
-File → Open Project → sélectionne le dossier FitVerseLens
+File → Open Project → sélectionne le dossier `ProjetXRCC`
+
+> La première ouverture régénère automatiquement le dossier `Cache/` (déclarations TypeScript). C'est normal, attends que la compilation se termine.
 
 **3. Vérifie la compilation TypeScript**
 Logger en bas → "TypeScript compilation succeeded!"
+
+**4. Connecte les Spectacles**
+- Assure-toi que les Spectacles et ton Mac sont sur le **même réseau Wi-Fi**
+- Preview → Connect Spectacles
+
+**5. Vérifie les logs au démarrage**
+```
+[FitVerseController] Démarrage FitVerse Lens...
+[FitVerseController] GarmentSwitcher: ✓
+[FitVerseController] CarouselManager: ✓
+[FitVerseController] ConfidenceScore: ✓
+[FitVerseController] Prêt ✓
+```
+Si tu vois des `✗ MANQUANT`, rouvre le projet dans Lens Studio.
 
 **4. Connecte tes Spectacles**
 Preview Lens → Connect Spectacles

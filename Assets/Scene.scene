@@ -7,6 +7,9 @@
     - !<own> 3c17b6ef-77a6-49f6-bc4f-355c62ac72e6
     - !<own> 8648ae2a-d13f-4407-b6b4-fff327a0b155
     - !<own> 9a753614-6f13-4f74-9153-46a006d86813
+    - !<own> 5c3797fd-3186-4e36-895e-381e1e9ad9f6
+    - !<own> aebf2f74-8889-4e92-be2c-db6278c396f1
+    - !<own> 3f00a3ef-5e1e-434c-b19f-a8cd3fa9f0d9
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -243,6 +246,21 @@
   Components:
     - !<own> 11ed1759-26dc-4136-9960-d81568a97b13
     - !<own> 61af6149-6867-44fb-8ffe-8caec7b8a96e
+- !<SceneObject/3f00a3ef-5e1e-434c-b19f-a8cd3fa9f0d9>
+  PrefabRemaps:
+    []
+  Name: BodyMeshContainer
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<Canvas/41781f37-9870-4b71-a28b-6584a068da5c>
   PrefabRemaps:
     []
@@ -262,6 +280,21 @@
   Enabled: true
   ScreenRegionType: FullFrame
   ResizeWithKeyboard: false
+- !<SceneObject/5c3797fd-3186-4e36-895e-381e1e9ad9f6>
+  PrefabRemaps:
+    []
+  Name: FitVerseController
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 882ed648-1386-463f-8a9a-ae41c889030a
 - !<SceneObject/5cc4b62f-1ab7-4afc-b6ea-652a19434e63>
   PrefabRemaps:
     []
@@ -523,6 +556,29 @@
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
   DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/882ed648-1386-463f-8a9a-ae41c889030a>
+  PrefabRemaps:
+    []
+  Name: FitVerseController
+  Enabled: true
+  ScriptAsset: !<reference> 79cd5134-7d67-4cb8-a07c-48f55f767138
+  ScriptInputsDefault:
+    startMode: true
+    scoreDelay: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      garmentSwitcherObject: !<reference.SceneObject> 3c17b6ef-77a6-49f6-bc4f-355c62ac72e6
+      carouselObject: !<reference.SceneObject> 8648ae2a-d13f-4407-b6b4-fff327a0b155
+      confidenceScoreObject: !<reference.SceneObject> 9a753614-6f13-4f74-9153-46a006d86813
+      garmentTransferContainer: !<reference.SceneObject> aebf2f74-8889-4e92-be2c-db6278c396f1
+      bodyMeshContainer: !<reference.SceneObject> 3f00a3ef-5e1e-434c-b19f-a8cd3fa9f0d9
+      startMode: garment_transfer
+      scoreDelay: !<float> 2.000000
+  ScriptTypes:
+    "":
+      {}
 - !<Image/8a8f15d8-20c0-4acb-b618-46d1bbcefbca>
   PrefabRemaps:
     []
@@ -718,6 +774,21 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/aebf2f74-8889-4e92-be2c-db6278c396f1>
+  PrefabRemaps:
+    []
+  Name: GarmentTransferContainer
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<SceneObject/bd0e2e0d-f8d4-48d8-92da-ce1cc76f748f>
   PrefabRemaps:
     []
